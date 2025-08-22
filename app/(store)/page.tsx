@@ -1,9 +1,10 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ProductCard } from "@/uicomponents/store/product-card"
-import { products as defaultProducts } from "@/public/products";
+import { ProductCard } from "@/uicomponents/store/product-card";
 import type { Product } from "@/lib/types"
+import { defaultProducts } from "@/public/products";
+
 export default function StorePage() {
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)

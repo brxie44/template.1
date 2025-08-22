@@ -1,16 +1,16 @@
 import { NextResponse } from "next/server"
 import { createZettleProduct } from "@/lib/zettle";
-import { products } from "@/public/products";
+import { defaultProducts } from "@/public/products";
 
 export async function GET() {
   try {
     console.log("=== ADMIN INVENTORY API: GET ===");
 
     // const products = await getZettleProducts()
-    console.log(`Admin API: Successfully fetched ${products.length} products`);
+    console.log(`Admin API: Successfully fetched ${defaultProducts.length} products`);
 
     // Sort products: in-stock first, then out-of-stock
-    const sortedProducts = products.sort((a, b) => {
+    const sortedProducts = defaultProducts.sort((a, b) => {
       // First sort by stock availability (in-stock first)
       if (a.stock > 0 && b.stock === 0) return -1;
       if (a.stock === 0 && b.stock > 0) return 1;

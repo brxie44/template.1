@@ -1,7 +1,7 @@
 import { Product } from "@/lib/types"
 
 
-export const products: Product[] = [
+export const defaultProducts: Product[] = [
   {
     uuid: "1",
     name: "Rubber Ball with Spikes",
