@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { ProductCard } from "@/uicomponents/store/product-card"
+import { products as defaultProducts } from "@/public/products";
 import type { Product } from "@/lib/types"
-
 export default function StorePage() {
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
@@ -20,45 +20,45 @@ export default function StorePage() {
       setError(null)
 
       // Use a consistent timestamp during SSR to prevent hydration mismatches
-      const timestamp = typeof window !== 'undefined' ? Date.now() : 0
-      const response = await fetch(`/api/inventory/admin?t=${timestamp}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "Cache-Control": "no-cache, no-store, must-revalidate",
-          "Pragma": "no-cache",
-        },
-        cache: "no-store",
-      })
+      // const timestamp = typeof window !== 'undefined' ? Date.now() : 0
+      // const response = await fetch(`/api/inventory/admin?t=${timestamp}`, {
+      //   method: "GET",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     "Cache-Control": "no-cache, no-store, must-revalidate",
+      //     "Pragma": "no-cache",
+      //   },
+      //   cache: "no-store",
+      // })
 
-      console.log("Store: Response status:", response.status)
-      console.log("Store: Response ok:", response.ok)
+      // console.log("Store: Response status:", response.status)
+      // console.log("Store: Response ok:", response.ok)
 
-      if (!response.ok) {
-        const contentType = response.headers.get("content-type")
-        if (contentType && contentType.includes("application/json")) {
-          const errorData = await response.json()
-          throw new Error(errorData.message || errorData.error || `HTTP ${response.status}`)
-        } else {
-          const errorText = await response.text()
-          console.error("Store: Non-JSON error response:", errorText.substring(0, 200))
-          throw new Error(`Server error: HTTP ${response.status}`)
-        }
-      }
+      // if (!response.ok) {
+      //   const contentType = response.headers.get("content-type")
+      //   if (contentType && contentType.includes("application/json")) {
+      //     const errorData = await response.json()
+      //     throw new Error(errorData.message || errorData.error || `HTTP ${response.status}`)
+      //   } else {
+      //     const errorText = await response.text()
+      //     console.error("Store: Non-JSON error response:", errorText.substring(0, 200))
+      //     throw new Error(`Server error: HTTP ${response.status}`)
+      //   }
+      // }
 
-      const contentType = response.headers.get("content-type")
-      if (!contentType || !contentType.includes("application/json")) {
-        const responseText = await response.text()
-        console.error("Store: Non-JSON response:", responseText.substring(0, 200))
-        throw new Error("Server returned non-JSON response")
-      }
+      // const contentType = response.headers.get("content-type")
+      // if (!contentType || !contentType.includes("application/json")) {
+      //   const responseText = await response.text()
+      //   console.error("Store: Non-JSON response:", responseText.substring(0, 200))
+      //   throw new Error("Server returned non-JSON response")
+      // }
 
-      const data = await response.json()
-      console.log("Store: Received products:", data.products?.length || data.length)
+      // const data = await response.json()
+      // console.log("Store: Received products:", data.products?.length || data.length)
 
-      // Handle both new format {products: [...]} and old format [...]
-      const productsArray = data.products || data
-      setProducts(productsArray)
+      // // Handle both new format {products: [...]} and old format [...]
+      // const productsArray = data.products || data
+      setProducts(defaultProducts)
     } catch (err) {
       console.error("Store: Error fetching products:", err)
       const errorMessage = err instanceof Error ? err.message : "Failed to load products"
