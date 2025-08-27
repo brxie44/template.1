@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { Button } from "@/uicomponents/ui/button"
-import { CartSheet } from "./cart-sheet"
 import { ShoppingBag } from "lucide-react"
 
 export function Header() {
@@ -17,7 +16,10 @@ export function Header() {
         </div>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <nav className="flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium transition-colors hover:text-primary">
+            <Link
+              href="/"
+              className="text-sm font-medium transition-colors hover:text-primary"
+            >
               Products
             </Link>
             <Link
@@ -33,8 +35,11 @@ export function Header() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center space-x-2">
-            <CartSheet />
+          <div className="flex items-center space-x-2 flex items-center justify-between">
+            <div
+              className="flex items-center justify-between"
+              id="paypal-view-cart-container"
+            ></div>
             <Button asChild variant="outline" size="sm">
               <Link href="/login">Admin</Link>
             </Button>
@@ -42,5 +47,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

@@ -11,7 +11,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "toy",
 	imageUrl: "/placeholder-t1old.png",
-	sku: '1234',
+	sku: '6HHPD34LK3GMW',
   },
   {
 	uuid: "2",
@@ -21,7 +21,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "toy",
 	imageUrl: "/brown-orange-plush-monkey.png",
-	sku: '1234',
+	sku: 'hgttyy898798879866',
   },
   {
 	uuid: "3",
@@ -31,7 +31,7 @@ export const defaultProducts: Product[] = [
 	stock: 2,
 	category: "accessory",
 	imageUrl: "/placeholder-q8gyj.png",
-	sku: '1234',
+	sku: 'hgttyy89879887986',
   },
   {
 	uuid: "4",
@@ -41,7 +41,7 @@ export const defaultProducts: Product[] = [
 	stock: 2,
 	category: "accessory",
 	imageUrl: "/placeholder-05r2x.png",
-	sku: '1234',
+	sku: 'hgttyy8987988798',
   },
   {
 	uuid: "5",
@@ -51,7 +51,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "accessory",
 	imageUrl: "/placeholder-irykk.png",
-	sku: '1234',
+	sku: 'hgttyy898798879',
   },
   {
 	uuid: "6",
@@ -61,7 +61,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "accessory",
 	imageUrl: "/placeholder-1dj9c.png",
-	sku: '1234',
+	sku: 'hgttyy89879887',
   },
   {
 	uuid: "7",
@@ -71,7 +71,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "toy",
 	imageUrl: "/blue-white-rope-toy.png",
-	sku: '1234',
+	sku: 'hgttyy8987988',
   },
   {
 	uuid: "8",
@@ -81,7 +81,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "accessory",
 	imageUrl: "/placeholder-t7tjp.png",
-	sku: '1234',
+	sku: 'hgttyy898798',
   },
   {
 	uuid: "9",
@@ -91,7 +91,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "accessory",
 	imageUrl: "/black-adjustable-pet-collar.png",
-	sku: '1234',
+	sku: 'hgttyy8987988798668dsfg',
   },
   {
 	uuid: "10",
@@ -101,7 +101,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "grooming",
 	imageUrl: "/blue-grooming-glove.png",
-	sku: '1234',
+	sku: 'hgttyy8987988798668asdfff',
   },
   {
 	uuid: "11",
@@ -111,7 +111,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "grooming",
 	imageUrl: "/placeholder.svg?height=300&width=300",
-	sku: '1234',
+	sku: 'hgttyy8987988798668fssdf',
   },
   {
 	uuid: "12",
@@ -121,7 +121,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "grooming",
 	imageUrl: "/placeholder.svg?height=300&width=300",
-	sku: '1234',
+	sku: 'hgttyy8987988798668yter',
   },
   {
 	uuid: "13",
@@ -131,7 +131,7 @@ export const defaultProducts: Product[] = [
 	stock: 2,
 	category: "accessory",
 	imageUrl: "/placeholder.svg?height=300&width=300",
-	sku: '1234',
+	sku: 'hgttyy8987988798668utyuio',
   },
   {
 	uuid: "14",
@@ -141,7 +141,7 @@ export const defaultProducts: Product[] = [
 	stock: 5,
 	category: "food",
 	imageUrl: "/placeholder.svg?height=300&width=300",
-	sku: '1234',
+	sku: 'hgttyy8987988798668wert',
   },
   {
 	uuid: "15",
@@ -151,7 +151,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "accessory",
 	imageUrl: "/placeholder.svg?height=300&width=300",
-	sku: '1234',
+	sku: 'hgttyy8987988798668nnmm',
   },
   {
 	uuid: "16",
@@ -161,7 +161,7 @@ export const defaultProducts: Product[] = [
 	stock: 1,
 	category: "accessory",
 	imageUrl: "/placeholder.svg?height=300&width=300",
-	sku: '1234',
+	sku: 'hgttyy8987988798668sshjrxx',
   },
 ]
 
