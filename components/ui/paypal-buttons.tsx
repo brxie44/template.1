@@ -1,6 +1,6 @@
 "use client"
 
-import { defaultProducts } from "@/public/products"
+import { defaultProducts } from "@/app/(store)/products";
 import { useEffect } from "react"
 
 export function PayPalButtons() {
